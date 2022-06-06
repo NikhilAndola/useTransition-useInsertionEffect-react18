@@ -1,0 +1,42 @@
+.parent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100px;
+  height: 104px;
+  /*   background-color: red; */
+}
+
+.parent span {
+  width: 48px;
+  height: 48px;
+  background-color: black;
+  animation: load 2s linear infinite;
+}
+
+span:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+span:nth-child(2) {
+  animation-delay: 1s;
+}
+
+span:nth-child(3) {
+  animation-delay: 2s;
+}
+
+span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes load {
+  25% {
+    border-radius: 50%;
+    background-color: #dba617;
+  }
+  50% {
+    border-radius: 0;
+    background-color: black;
+  }
+}

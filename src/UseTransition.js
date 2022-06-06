@@ -1,7 +1,8 @@
 import * as React from 'react';
 import './style.css';
+import { Loader } from './Loader/Loader';
 
-export default function App() {
+export default function UseTransition() {
   const [isPending, startTransition] = React.useTransition();
   const [input, setInput] = React.useState('');
   const [list, setList] = React.useState([]);
@@ -20,11 +21,12 @@ export default function App() {
 
   return (
     <div>
-      <h1>useTransition() and useInsertion() hook</h1>
       <input value={input} onChange={handleChange} />
-      {list.map((item, ind) => (
-        <div key={ind}>{item}</div>
-      ))}
+      {isPending ? (
+        <Loader />
+      ) : (
+        list.map((item, ind) => <div key={ind}>{item}</div>)
+      )}
     </div>
   );
 }
