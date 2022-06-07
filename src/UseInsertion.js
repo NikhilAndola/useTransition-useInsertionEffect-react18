@@ -6,7 +6,9 @@ export const UseInsertion = () => {
       <h3>useInsertion() Definition:</h3>
       <section>
         <strong>
-          <code>useInsertionEffect(didUpdate);</code>
+          <code>
+            <u>useInsertionEffect(didUpdate);</u>
+          </code>
         </strong>
         <p>
           The signature is identical to useEffect, but it fires synchronously
